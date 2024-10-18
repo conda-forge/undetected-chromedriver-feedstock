@@ -12,14 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >=3.6,<3.12
     - selenium >=4.9.0
     - requests
     - websockets
